@@ -2,7 +2,7 @@ import { FETCHREST, FOUNDREST, ERROR } from "./types";
 //import axios to help fetch the data from apis with no errors
 import axios from "axios";
 
-//link to fix No 'Access-Control-Allow-Origin' request so the data recieved correctly
+//link to fix 'No Access-Control-Allow-Origin' request so the data recieved correctly
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 //fetch restaurant function fetch restaurant data from api and sedn it to reducer
