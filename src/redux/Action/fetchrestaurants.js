@@ -2,6 +2,9 @@ import { FETCHREST, FOUNDREST, ERROR } from "./types";
 //import axios to help fetch the data from apis with no errors
 import axios from "axios";
 
+//link to fix No 'Access-Control-Allow-Origin' request so the data recieved correctly
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
 //fetch restaurant function fetch restaurant data from api and sedn it to reducer
 export const FetchRest = (lat, long) => {
   return dispatch => {
@@ -9,7 +12,8 @@ export const FetchRest = (lat, long) => {
     dispatch({ type: FETCHREST });
     axios
       .get(
-        "http://wainnakel.com/api/v1/GenerateFS.php?uid=" +
+          proxyurl +
+          "http://wainnakel.com/api/v1/GenerateFS.php?uid=" +
           lat +
           "," +
           long +
